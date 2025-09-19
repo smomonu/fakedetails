@@ -5,62 +5,13 @@
 /* Custom utilities for iPhone 16 Pro Max styling */
 @layer utilities {
   .iphone-container {
-    width: min(393px, 90vw);
-    height: min(852px, 95vh);
+    max-width: min(420px, 90vw);
+    max-height: min(calc(420px * 852 / 393), 95vh);
     overflow: hidden;
     box-sizing: border-box;
-    position: relative;
   }
   
   .iphone-aspect {
     aspect-ratio: 393 / 852;
   }
-  
-  /* iPhone 16 Pro Max specific styling */
-  .iphone-screen {
-    border-radius: 2.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  }
-  
-  /* Custom scrollbar for chat */
-  .chat-scroll::-webkit-scrollbar {
-    width: 2px;
-  }
-  
-  .chat-scroll::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  
-  .chat-scroll::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 1px;
-  }
-  
-  .chat-scroll::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.3);
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 640px) {
-  .iphone-container {
-    width: 95vw;
-    height: 90vh;
-  }
-}
-
-/* Animation for message bubbles */
-@keyframes messageSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.message-bubble {
-  animation: messageSlideIn 0.3s ease-out;
 }
