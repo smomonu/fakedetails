@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utilities for iPhone 16 Pro Max styling */
+@layer utilities {
+  .iphone-container {
+    max-width: min(420px, 90vw);
+    max-height: min(calc(420px * 852 / 393), 95vh);
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .iphone-aspect {
+    aspect-ratio: 393 / 852;
+  }
+}
